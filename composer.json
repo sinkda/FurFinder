@@ -57,6 +57,7 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "php-cs-fixer": "php-cs-fixer fix --rules=@PSR2"
     }
 }
