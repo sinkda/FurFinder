@@ -20,7 +20,7 @@ class DogController extends Controller
         if(!$dog)
             return redirect('/');
 
-        $organization = $dog->organization();
+        $org = $dog->organization();
 
         return view('pages.dog', ['dog' => $dog, 'org' => $org]);
     }
