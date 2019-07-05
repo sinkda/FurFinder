@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@show');
 Route::get('/about', 'HomeController@about');
+Route::get('/dog/{id}', 'DogController@show');
 
 
 // Fallback to the homepage.
