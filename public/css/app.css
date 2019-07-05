@@ -1,12 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);#paws {
   background-image: url("/img/footprints.jpg");
   background-repeat: repeat;
-  opacity: 0.05;
+  opacity: 0.1;
   position: absolute;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
+}
+
+.title-link a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 1000px) {
@@ -57,5 +62,68 @@
     -webkit-box-ordinal-group: 3;
             order: 2;
   }
+}
+
+#content-card {
+  align-self: flex-start;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 1000px) {
+  #content-card > .layout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  #content-card > .layout > .flex {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    flex-basis: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .content-parent {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+            flex-direction: column !important;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+  }
+
+  .content-parent > .v-navigation-drawer {
+    width: 100% !important;
+  }
+
+  .content-parent > #content-card {
+    width: 100%;
+  }
+
+  .content-parent > #content-card .flex {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.portrait {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dogname {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dogbreed {
+  text-align: center;
+}
+
+.v-navigation-drawer {
+  z-index: 0;
 }
 

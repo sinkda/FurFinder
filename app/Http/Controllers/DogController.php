@@ -21,7 +21,18 @@ class DogController extends Controller
             return redirect('/');
 
         $org = $dog->organization();
+        $dog->readableBreed = $this->readableBreed($dog->breed);
 
         return view('pages.dog', ['dog' => $dog, 'org' => $org]);
+    }
+
+    private function readableBreed($breed)
+    {
+        if(!strpos($breed, '-'))
+            return ucfirst($breed);
+
+        [$primary, $secondary] = explode('-', $breed);
+        return ucfirst($secondary).' '.ucfirst($primary);
+
     }
 }

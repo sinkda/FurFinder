@@ -1,11 +1,18 @@
 #paws {
     background-image: url('/img/footprints.jpg');
     background-repeat: repeat;
-    opacity: 0.05;
+    opacity: 0.1;
 
     position: absolute;
     top: 0px;
     bottom: 0px;
     right: 0px;
     left: 0px;
+}
+
+.title-link {
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
