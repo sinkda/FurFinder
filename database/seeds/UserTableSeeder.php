@@ -22,6 +22,7 @@ class UserTableSeeder extends Seeder
             'email' => $faker->unique()->email,
             'password' => bcrypt('admin'),
             'permissions' => 1, // 1 == site admin
+            'avatar' => 'gPZwCbdS.jpg'
         ]);
 
         // insert 2 different rescue organizations
@@ -31,6 +32,7 @@ class UserTableSeeder extends Seeder
             'email' => $faker->unique()->email,
             'password' => bcrypt('password'),
             'permissions' => 2, // 2 == organization user
+            'avatar' => 'zH_q0-_s.png'
         ]);
 
         DB::table('users')->insert([
@@ -39,6 +41,7 @@ class UserTableSeeder extends Seeder
             'email' => $faker->unique()->email,
             'password' => bcrypt('password'),
             'permissions' => 2, // 2 == organization user
+            'avatar' => 'rSuiu_Hr.jpg'
         ]);
 
     }
