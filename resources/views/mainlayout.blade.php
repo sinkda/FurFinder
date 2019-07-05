@@ -23,7 +23,11 @@
     <div id="app">
         <v-app>
             <v-toolbar app dark color="primary">
-                <v-toolbar-title class="white--text">FurFinder</v-toolbar-title>
+                <v-toolbar-title class="white--text title-link">
+                    <a href="/" >
+                        <v-icon>pets</v-icon> FurFinder
+                    </a>
+                </v-toolbar-title>
                 <v-spacer></v-spacer>
 
                 <v-btn icon>
@@ -45,7 +49,7 @@
                     <v-btn
                         v-for="link in links"
                         :href="link.href"
-                        :key="link.key"
+                        :key="link.name"
                         color="white" flat round>
                         @{{ link.name }}
                     </v-btn>

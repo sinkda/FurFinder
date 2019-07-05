@@ -15,19 +15,43 @@ new Vue({
         links: () => [
             {
                 name: 'Home',
-                href: '/',
-                key: 1,
+                href: '/'
             },
             {
                 name: 'About Us',
-                href: '/about',
-                key: 2,
+                href: '/about'
             },
             {
                 name: 'Organizations',
-                href: '/organizations',
-                key: 3,
+                href: '/organizations'
+            }
+        ],
+        dogActions: () => [
+            {
+                icon: 'share',
+                title: 'Share Me!',
+                action: 'share'
+            },
+            {
+                icon: 'accessibility_new',
+                title: 'Adopt Me!',
+                action: 'adopt'
+            },
+            {
+                icon: 'email',
+                title: 'Get notified when i\'m adopted!',
+                action: 'notify'
+            },
+            {
+                icon: 'store',
+                title: 'See Organization',
+                action: 'org'
             }
         ]
+    },
+    methods: {
+        dogDoAction: function(event) {
+            console.table(event);
+        }
     }
 });

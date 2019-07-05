@@ -38560,17 +38560,38 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     links: function links() {
       return [{
         name: 'Home',
-        href: '/',
-        key: 1
+        href: '/'
       }, {
         name: 'About Us',
-        href: '/about',
-        key: 2
+        href: '/about'
       }, {
         name: 'Organizations',
-        href: '/organizations',
-        key: 3
+        href: '/organizations'
       }];
+    },
+    dogActions: function dogActions() {
+      return [{
+        icon: 'share',
+        title: 'Share Me!',
+        action: 'share'
+      }, {
+        icon: 'accessibility_new',
+        title: 'Adopt Me!',
+        action: 'adopt'
+      }, {
+        icon: 'email',
+        title: 'Get notified when i\'m adopted!',
+        action: 'notify'
+      }, {
+        icon: 'store',
+        title: 'See Organization',
+        action: 'org'
+      }];
+    }
+  },
+  methods: {
+    dogDoAction: function dogDoAction(event) {
+      console.table(event);
     }
   }
 });
