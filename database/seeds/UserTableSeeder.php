@@ -18,6 +18,8 @@ class UserTableSeeder extends Seeder
         // insert our admin user
         DB::table('users')->insert([
             'name' => $faker->unique()->firstName,
+            'created_at' => $faker->date().' '.$faker->time(),
+            'updated_at' => $faker->date().' '.$faker->time(),
             'username' => 'admin',
             'email' => $faker->unique()->email,
             'password' => bcrypt('admin'),
@@ -28,6 +30,8 @@ class UserTableSeeder extends Seeder
         // insert 2 different rescue organizations
         DB::table('users')->insert([
             'name' => $faker->unique()->firstNameFemale,
+            'created_at' => $faker->date().' '.$faker->time(),
+            'updated_at' => $faker->date().' '.$faker->time(),
             'username' => $faker->unique()->userName,
             'email' => $faker->unique()->email,
             'password' => bcrypt('password'),
@@ -37,6 +41,8 @@ class UserTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => $faker->unique()->firstNameMale,
+            'created_at' => $faker->date().' '.$faker->time(),
+            'updated_at' => $faker->date().' '.$faker->time(),
             'username' => $faker->unique()->userName,
             'email' => $faker->unique()->email,
             'password' => bcrypt('password'),
