@@ -13,7 +13,7 @@ class Organization extends Model
 
     public function countDogs()
     {
-        return $this->hasMany('App\Dog')->count();
+        return $this->dogs()->count();
     }
 
     public function users()

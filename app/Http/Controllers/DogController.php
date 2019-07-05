@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Dog;
+use App\Organization;
 
 class DogController extends Controller
 {
@@ -20,7 +21,7 @@ class DogController extends Controller
         if(!$dog)
             return redirect('/');
 
-        $org = $dog->organization();
+        $org = $dog->organization()->get()[0];
         $dog->readableBreed = $this->readableBreed($dog->breed);
 
         return view('pages.dog', ['dog' => $dog, 'org' => $org]);
