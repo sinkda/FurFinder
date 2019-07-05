@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'HomeController@show');
+Route::get('/about', 'HomeController@about');
+
+
+// Fallback to the homepage.
+Route::fallback(function() {
+    return redirect('/');
+});

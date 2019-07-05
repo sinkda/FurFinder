@@ -1,0 +1,16 @@
+#about {
+    @media (max-width: 1000px)
+    {
+        flex-direction: column;
+
+        .flex {
+            flex-basis: 100%;
+            flex-grow: 1;
+            max-width: 100%;
+    
+            &:first-child {
+                order: 2;
+            }
+        }
+    }   
+}
