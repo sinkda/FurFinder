@@ -14,9 +14,9 @@
  inspired by [PetFinder.com](httpss://www.petfinder.com).
  
  ## Technology  <a name="technology"></a>
- * PHP _v7.1.3_
+ * PHP _v7.1_
  * Laravel _v5.8_
- * VueJS _v2.5_
+ * VueJS _v2.6_
  * Vuetify _v1.5_
  * MySQL
  * RESTful API via [Dog API](https://dog.ceo/dog-api/)
