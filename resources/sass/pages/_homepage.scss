@@ -1,0 +1,30 @@
+#randomDogs {
+    .flex {
+        @media (max-width: 1000px)
+        {
+            width: 50%;
+        }
+
+        @media (max-width: 600px) {
+            width: auto;
+        }
+    }
+}
+
+#spotlight {
+    min-height: 200px;
+
+}
+
+.spotlight__user-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+    }
+}

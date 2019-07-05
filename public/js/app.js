@@ -38546,7 +38546,33 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_1___default.a);
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app'
+  el: '#app',
+  computed: {
+    currentYear: function currentYear() {
+      return new Date().getFullYear();
+    },
+    loginLinks: function loginLinks() {
+      return {
+        name: window.App.LoggedIn ? 'Logout' : 'Login',
+        href: window.App.LoggedIn ? '/logout' : '/login'
+      };
+    },
+    links: function links() {
+      return [{
+        name: 'Home',
+        href: '/',
+        key: 1
+      }, {
+        name: 'About Us',
+        href: '/about',
+        key: 2
+      }, {
+        name: 'Organizations',
+        href: '/organizations',
+        key: 3
+      }];
+    }
+  }
 });
 
 /***/ }),

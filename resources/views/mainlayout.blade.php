@@ -12,14 +12,55 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
 
+    <script type="text/javascript">
+        window.App = {};
+        window.App.LoggedIn = false;
+    </script>
+
     <title>FurFinder</title>
 </head>
 <body>
     <div id="app">
         <v-app>
+            <v-toolbar app dark color="primary">
+                <v-toolbar-title class="white--text">FurFinder</v-toolbar-title>
+                <v-spacer></v-spacer>
+
+                <v-btn icon>
+                    <v-icon>search</v-icon>
+                </v-btn>
+                <v-btn :href="loginLinks.href">@{{ loginLinks.name }}</v-btn>
+            </v-toolbar>
+
             <v-content>
-                <v-container>Hello world</v-container>
+                <div id="paws"></div>
+                <v-container fluid>
+                    @yield('content')
+                </v-container>
             </v-content>
+
+            
+            <v-footer app height="auto" color="primary lighten-1" >
+                <v-layout justify-center row wrap>
+                    <v-btn
+                        v-for="link in links"
+                        :href="link.href"
+                        :key="link.key"
+                        color="white" flat round>
+                        @{{ link.name }}
+                    </v-btn>
+
+                    <v-btn 
+                        :href="loginLinks.href"
+                        color="white" flat round>
+                        @{{ loginLinks.name }}
+                    </v-btn>
+
+                    <v-flex primary lighten-2 text-xs-center py-3 xs12>
+                        &copy; @{{ currentYear }} -- <strong>FurFinder</strong>
+                    </v-flex>
+                </v-layout>
+            </v-footer>
         </v-app>
 
     </div>

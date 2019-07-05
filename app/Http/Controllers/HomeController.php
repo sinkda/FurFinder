@@ -2,17 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Dog;
+use App\Organization;
+use Illuminate\Support\Facades\DB;
+
 
 class HomeController extends Controller
 {
-
     /**
      * Homepage
      *
      */
     public function show()
     {
-        return view('mainlayout');
+        $randDogs = Dog::orderBy(DB::raw('RAND()'))->take(4)->get();
+        $spotlightOrg = Organization::orderBy(DB::raw('RAND()'))->take(1)->get()[0];
+        $spotlightOrg->count = $spotlightOrg->countDogs();
+        $spotlightOrg->randomUser = $spotlightOrg->users()->take(1)->get()[0];
+
+        return view('pages.home', ['dogs' => $randDogs, 'spotlight' => $spotlightOrg]);
+    }
+
+    /**
+     * About Page
+     *
+     */
+    public function about()
+    {
+        return view('pages.about');
     }
 }
