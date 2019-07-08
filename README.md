@@ -11,7 +11,7 @@
  
  ## About <a name="about"></a>
  Portfolio Piece showcasing the use of Laravel and VueJS for a fullstack website. This site is 
- inspired by [PetFinder.com](httpss://www.petfinder.com).
+ inspired by [PetFinder.com](https://www.petfinder.com).
  
  ## Technology  <a name="technology"></a>
  * PHP _v7.1_
@@ -27,6 +27,7 @@
    * Admin User
    * Organization User
  * Add dogs to organizations.
+ * Share dogs you like on Twitter.
  
  ## Installation Instructions <a name="install"></a>
  
@@ -63,4 +64,5 @@
     * _Password:_ password
 
 ## Resources <a name="resources"></a>
-Images of faces provided by: [UI Faces](https://uifaces.co/) _specifically from the Donated section_
+* Images of faces provided by: [UI Faces](https://uifaces.co/) _specifically from the Donated section_
+* [Lorem Ipsem Generator Package](https://github.com/joshtronic/php-loremipsum)
