@@ -44,6 +44,13 @@
      @endforeach
 </v-layout>
 
+{{-- See More Dogs --}}
+<v-layout mb-5 align-center column>
+    <v-flex pa-2>
+        <v-btn color="primary" href="/dog" large>See More Dogs!</v-btn>
+    </v-flex>
+</v-layout>
+
 {{-- Organization Spotlight --}}
 <v-layout mb-5>
     <v-flex xs12>
