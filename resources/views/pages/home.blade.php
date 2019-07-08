@@ -39,7 +39,7 @@
 
             <v-card-actions>
                 <v-btn flat color="primary" href="/dog/{{$dog->id}}">See Me!</v-btn>
-                <v-btn flat color="primary">Share Me!</v-btn>
+                <v-btn flat color="primary" target="_blank" href="@twitter('/dog/{{$dog->id}}', '{{$dog->name}}')">Share Me!</v-btn>
             </v-card-actions>
         </v-card>
     </v-flex>
