@@ -38587,12 +38587,33 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
         title: 'See Organization',
         action: 'org'
       }];
+    },
+    dogName: function dogName() {
+      if (window.App.CurrentDog.Name) return window.App.CurrentDog.Name;else return '';
     }
   },
   methods: {
     dogDoAction: function dogDoAction(event) {
-      console.table(event);
+      switch (event) {
+        // use the twitter share
+        case 'share':
+          window.open('https://www.twitter.com/share?url=' + window.location.href + '&amp;text=Look at this adorable dog ' + window.App.CurrentDog.Name + '!');
+          break;
+
+        case 'notify':
+          this.notifyDialog = true;
+          break;
+
+        default:
+          console.error('No Implemented Action for: ' + event);
+          break;
+      }
     }
+  },
+  data: function data() {
+    return {
+      notifyDialog: false
+    };
   }
 });
 

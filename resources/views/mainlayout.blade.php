@@ -15,6 +15,12 @@
     <script type="text/javascript">
         window.App = {};
         window.App.LoggedIn = false;
+
+        {{-- If we are on a dog page with $dog defined, fill in the dog's information --}}
+        @isset($dog)
+            window.App.CurrentDog = {}
+            window.App.CurrentDog.Name = '{{ $dog->name }}';
+        @endisset
     </script>
 
     <title>FurFinder</title>

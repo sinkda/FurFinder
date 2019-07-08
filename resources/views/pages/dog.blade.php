@@ -57,4 +57,28 @@
         </v-card>
     </v-flex>
 </v-layout>
+
+{{-- Modal Box--}}
+<div class="text-xs-center">
+    <v-dialog v-model="notifyDialog" width="500">
+        <v-card>
+            <v-card-title class="headline grey lighten-2">
+                You will be notified!
+            </v-card-title>
+            <v-divider></v-divider>
+
+            <v-card-text>
+                Consider yourself notified once @{{  dogName }} is adopted! Keep an eye on your inbox!
+            </v-card-text>
+            <v-divider></v-divider>
+
+            <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" flat @click="notifyDialog = false">Can't Wait!</v-btn>
+            </v-card-actions>
+        </v-card>
+
+
+    </v-dialog>
+</div>
 @endsection
