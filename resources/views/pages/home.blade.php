@@ -23,14 +23,16 @@
     @foreach ($dogs as $dog)
     <v-flex pa-2>
         <v-card>
-            <v-img src="https://images.dog.ceo/breeds/{{ $dog->breed }}/{{ $dog->image }}" 
-            alt="Image of {{ $dog->name }}" cover aspect-ratio="1"></v-img>
+            <a href="/dog/{{$dog->id}}">
+                <v-img src="https://images.dog.ceo/breeds/{{ $dog->breed }}/{{ $dog->image }}"
+                       alt="Image of {{ $dog->name }}" cover aspect-ratio="1"></v-img>
+            </a>
 
             <v-card-title primary-title>
                 <div>
-                    <h3 class="headline mb-1"> {{ $dog->name }}</h3>
-                    <div>
-                        {{ $dog->description }}
+                    <a href="/dog/{{$dog->id}}"><h3 class="headline mb-1"> {{ $dog->name }}</h3></a>
+                    <div class="dog-desc">
+                        {{ $dog->description }} {{ (new \joshtronic\LoremIpsum())->sentence()  }}
                     </div>
                 </div>
             </v-card-title>

@@ -1,6 +1,7 @@
 #content-card {
     align-self: flex-start;
     flex-grow: 1;
+    flex: 1;
 
     .flex:first-child {
         margin-right: 30px;
@@ -49,6 +50,8 @@
 .portrait {
     border-radius: 50%;
     object-fit: cover;
+
+    box-shadow: 1px 1px 10px 0px #000000;
 }
 
 .dogname {

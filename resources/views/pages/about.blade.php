@@ -6,8 +6,8 @@
         <v-card xs12>
             <v-parallax dark src="/img/abby_douglas.png" mb-5>
                 <v-layout align-center column justify-center>
-                    <h1 class="display-2 mb-3 black--text" >About Furfinder</h1>
-                    <h4 class="subheading black--text">The Furever Mission</h4>
+                    <h1 class="display-2 mb-3 about-shadow">About Furfinder</h1>
+                    <h4 class="subheading about-shadow">The Furever Mission</h4>
                 </v-layout>
             </v-parallax>
 
@@ -30,12 +30,14 @@
     
                         <p class="mb2">It started with a single bark. That is when we knew we needed to help find homes for 
                             all our furfriends. Abby and Douglas are the founders of FurFinder and the official
-                            spokespups.
+                            spokespups.<br><br>
     
                             They had a dream of having the best life for themselves and for others. And to achieve
                             this dream they encouraged their father to build this site to help all those puppies in need.
                             And add to their father's programming portfolio at the same time!. All of this, from a single
-                            bark.
+                            bark.<br><br>
+
+                            {{ (new \joshtronic\LoremIpsum())->paragraph()  }}
                         </p>
 
                         <p class="caption"> 

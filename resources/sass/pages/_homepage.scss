@@ -2,12 +2,37 @@
     .flex {
         @media (max-width: 1000px)
         {
-            width: 50%;
+            flex-basis: 50%;
         }
 
         @media (max-width: 600px) {
-            width: auto;
+            flex-basis: auto;
         }
+
+        flex: 0 1 24%;
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        & > .v-card {
+
+            height: 100%;
+
+            &:hover {
+                box-shadow: 1px 1px 10px 0px #000;
+            }
+        }
+    }
+
+    .dog-desc {
+        margin-bottom: 30px;
+    }
+
+    .v-card__actions {
+        position: absolute;
+        bottom: 0px;
     }
 }
 
@@ -26,5 +51,7 @@
         object-fit: cover;
         width: 200px;
         height: 200px;
+
+        box-shadow: 1px 1px 10px 0px #000000;
     }
 }

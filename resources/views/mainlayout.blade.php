@@ -38,7 +38,7 @@
 
             <v-content>
                 <div id="paws"></div>
-                <v-container fluid>
+                <v-container>
                     @yield('content')
                 </v-container>
             </v-content>
