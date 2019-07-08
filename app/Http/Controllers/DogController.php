@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Dog;
-use App\Organization;
+use joshtronic\LoremIpsum;
 
 class DogController extends Controller
 {
@@ -27,6 +25,12 @@ class DogController extends Controller
 
         $org = $dog->organization()->get()[0];
         $dog->readableBreed = $this->readableBreed($dog->breed);
+
+        // Let us buff up some of the text to look more legit.
+        $lorem = new LoremIpsum();
+
+        $dog->description .= ' '. $lorem->sentences(3);
+
 
         return view('pages.dog', ['dog' => $dog, 'org' => $org]);
     }
