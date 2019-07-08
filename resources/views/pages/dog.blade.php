@@ -55,6 +55,14 @@
                 </v-navigation-drawer>
             </v-layout>
         </v-card>
+
+        {{-- See More Dogs --}}
+        <v-layout mb-2 align-center column>
+            <v-flex pa-2>
+                <v-btn color="primary" href="/dog" large>See More Dogs!</v-btn>
+            </v-flex>
+        </v-layout>
+
     </v-flex>
 </v-layout>
 
