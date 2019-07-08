@@ -9,8 +9,12 @@ use App\Organization;
 
 class DogController extends Controller
 {
-    public function show($id)
+    public function show($id = null)
     {
+        // if no $id is provided. 
+        if(!$id)
+            return view('pages.alldogs');
+
         // validate $id is a number.
         if(!is_numeric($id))
             return redirect('/');
