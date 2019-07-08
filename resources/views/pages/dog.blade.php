@@ -16,7 +16,22 @@
                         </v-flex>
                         <v-flex pa-2 xs8>
                             <h2>Meet {{ $dog->name }}!</h2>
-                            {{ $dog->description }}
+                            <p>{{ $dog->description }}</p>
+
+                            <div class="joined">
+                                <strong>Joined FurFinder</strong>
+                                    on <u>{{ (new DateTime($dog->created_at))->format('F jS, Y') }}</u> <br>
+                                <strong>Last Updated</strong>
+                                    on <u>{{ (new DateTime($dog->updated_at))->format('l F jS, Y @ g:i A') }}</u> <br>
+                            </div>
+                       
+                            <v-card>
+                                <v-card-title class="elevation-4">
+                                    <h3 class="heading">
+                                        {{ $dog->name }} is available at: {{ $org->name }}
+                                    </h3>
+                                </v-card-title>
+                            </v-card>
                         </v-flex>
                     </v-layout>
                 </v-card-title>

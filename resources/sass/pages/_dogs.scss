@@ -2,6 +2,10 @@
     align-self: flex-start;
     flex-grow: 1;
 
+    .flex:first-child {
+        margin-right: 30px;
+    }
+
     & > .layout {
         @media (max-width: 1000px)
         {
@@ -11,10 +15,12 @@
                 flex-grow: 1;
                 flex-basis: 90%;
                 max-width: 90%;
-            }
-        }
 
-        
+                &:first-child {
+                    margin-right: 0px;
+                }
+            }
+        }  
     }
 }
 
@@ -52,6 +58,11 @@
 
 .dogbreed {
     text-align: center;
+}
+
+.joined {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 // Overwrite the z-index on v-navigation-drawer that causes a weird scrolling error
