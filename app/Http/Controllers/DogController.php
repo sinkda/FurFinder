@@ -9,9 +9,9 @@ class DogController extends Controller
 {
     public function show($id = null)
     {
-        // if no $id is provided. 
+        // if no $id is provided, view all dogs
         if (!$id)
-            return view('pages.alldogs');
+            return view('pages.alldogs', ['dogs' => Dog::all()]);
 
         // validate $id is a number.
         if (!is_numeric($id))
