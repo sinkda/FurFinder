@@ -1,6 +1,6 @@
 #randomDogs {
     .flex {
-        @media (max-width: 1000px)
+        @media (max-width: 1264px)
         {
             flex-basis: 50%;
         }
@@ -38,6 +38,17 @@
 
 #spotlight {
     min-height: 200px;
+
+    @media (max-width: 600px)
+    {
+        flex-direction: column;
+        align-items: center;
+
+        .flex:first-child {
+            margin-bottom: 20px;
+        }
+    }
+
 
 }
 

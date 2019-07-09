@@ -18,7 +18,7 @@
   -webkit-box-flex: 0;
           flex: 0 1 24%;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1264px) {
   #randomDogs .flex {
     flex-basis: 50%;
   }
@@ -48,6 +48,18 @@
 
 #spotlight {
   min-height: 200px;
+}
+@media (max-width: 600px) {
+  #spotlight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  #spotlight .flex:first-child {
+    margin-bottom: 20px;
+  }
 }
 
 .spotlight__user-image {
