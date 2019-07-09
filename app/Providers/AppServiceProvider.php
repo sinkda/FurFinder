@@ -29,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
 
             // expression is a string and needs to be split up:
             [$url, $name] = $this->getParts($expression);
+
+            // fix any issues with slashes for the URL.
+            $url = rtrim($url, '/');
+            $url = '/'. ltrim($url, '/');
+
             $url = getenv('APP_URL') . $url;
 
             return "https://www.twitter.com/share?url={$url}&amp;text=Look at this adorable dog {$name}!";
