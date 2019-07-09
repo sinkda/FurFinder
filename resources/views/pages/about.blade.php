@@ -46,16 +46,6 @@
                     </v-flex>
                     
                 </v-layout>
-
-                <div>
-                    
-                    
-                    
-
-                    
-
-                    
-                </div>
             </v-card-title>
 
         </v-card>
