@@ -12,7 +12,7 @@
                             alt="Portrait of {{ $dog->name }}" class="portrait" aspect-ratio="1"></v-img>
 
                             <h1 class='dogname'>{{ $dog->name }}</h1>
-                            <h2 class='dogbreed'>{{ $dog->readableBreed }}</h2>
+                            <h2 class='dogbreed'>{{ $dog->readableBreed() }}</h2>
                         </v-flex>
                         <v-flex pa-2 xs8>
                             <h2>Meet {{ $dog->name }}!</h2>
