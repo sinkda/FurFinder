@@ -69,6 +69,10 @@ new Vue({
                     this.notifyDialog = true;
                     break;
 
+                case 'org':
+                    window.location.href = '/organization/'+ window.App.CurrentDog.OrgId;
+                    break;
+
                 default:
                     console.error('No Implemented Action for: '+ event);
                     break;

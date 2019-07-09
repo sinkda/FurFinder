@@ -38604,6 +38604,10 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
           this.notifyDialog = true;
           break;
 
+        case 'org':
+          window.location.href = '/organization/' + window.App.CurrentDog.OrgId;
+          break;
+
         default:
           console.error('No Implemented Action for: ' + event);
           break;

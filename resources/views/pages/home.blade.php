@@ -49,7 +49,7 @@
 {{-- See More Dogs --}}
 <v-layout mb-5 align-center column>
     <v-flex pa-2>
-        <v-btn color="primary" href="/dog" large>See More Dogs!</v-btn>
+        <v-btn color="primary" href="/dogs" large>See More Dogs!</v-btn>
     </v-flex>
 </v-layout>
 
@@ -76,7 +76,7 @@
                                     <strong>Number of Dogs:</strong> {{ $spotlight->count }}
                                 </v-flex>
                                 <v-flex>
-                                    <v-btn color="primary">Check them out!</v-btn>
+                                    <v-btn color="primary" href="/organization/{{ $spotlight->id }}">Check them out!</v-btn>
                                 </v-flex>
                             </v-layout>
                         </v-flex>

@@ -20,6 +20,7 @@
         @isset($dog)
             window.App.CurrentDog = {};
             window.App.CurrentDog.Name = '{{ $dog->name }}';
+            window.App.CurrentDog.OrgId = '{{ $dog->organization()->get()[0]->id }}';
         @endisset
     </script>
 

@@ -14,6 +14,9 @@
 Route::get('/', 'HomeController@show');
 Route::get('/about', 'HomeController@about');
 Route::get('/dog/{id?}', 'DogController@show');
+Route::get('/dogs', 'DogController@show');
+Route::get('/organization/{id?}', 'OrgController@show');
+Route::get('/organizations', 'OrgController@show');
 
 
 // Fallback to the homepage.
