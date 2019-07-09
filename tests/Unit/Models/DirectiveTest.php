@@ -30,5 +30,28 @@ class DirectiveTest extends TestCase
         $this->assertEquals($expected, $compiledString);
     }
 
+    /** @test */
+    public function blade_directive_twitter_without_first_slash()
+    {
+        $expression = "@twitter('dog/1', 'Fido')";
+
+        $expected = 'https://www.twitter.com/share?url='. getenv('APP_URL'). '/dog/1&amp;text=Look at this adorable dog Fido!';
+
+        $compiledString = $this->blade->compileString($expression);
+        $this->assertEquals($expected, $compiledString);
+
+    }
+
+    /** @test */
+    public function blade_directive_twitter_with_trailing_slash()
+    {
+        $expression = "@twitter('/dog/1/', 'Fido')";
+
+        $expected = 'https://www.twitter.com/share?url='. getenv('APP_URL'). '/dog/1&amp;text=Look at this adorable dog Fido!';
+
+        $compiledString = $this->blade->compileString($expression);
+        $this->assertEquals($expected, $compiledString);
+
+    }
 
 }
