@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         // Let us buff up some of the text to look more legit.
         $lorem = new LoremIpsum();
-        $spotlightOrg->description .= ' '. $lorem->sentences(2);
+        $spotlightOrg->description .= ' ' . $lorem->sentences(2);
 
         return view('pages.home', ['dogs' => $randDogs, 'spotlight' => $spotlightOrg]);
     }
